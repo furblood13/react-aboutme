@@ -1,6 +1,12 @@
-import type { RefObject } from 'react';
-import { HiFolder, HiDocumentText, HiBriefcase, HiAcademicCap, HiCode } from 'react-icons/hi';
-import type { SectionType } from '../../types';
+import type { RefObject } from "react";
+import {
+  HiFolder,
+  HiDocumentText,
+  HiBriefcase,
+  HiAcademicCap,
+  HiCode,
+} from "react-icons/hi";
+import type { SectionType } from "../../types";
 
 interface NavigationProps {
   activeSection: SectionType;
@@ -17,18 +23,20 @@ interface NavigationProps {
 export const Navigation = ({
   activeSection,
   setActiveSection,
-  mainContentRef,
   experienceRef,
   projectsRef,
   educationRef,
   skillsRef,
   aboutRef,
-  onNavigate
+  onNavigate,
 }: NavigationProps) => {
-  const handleNavigate = (section: SectionType, ref: RefObject<HTMLElement | null>) => {
+  const handleNavigate = (
+    section: SectionType,
+    ref: RefObject<HTMLElement | null>
+  ) => {
     setActiveSection(section);
     if (ref?.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     onNavigate?.();
   };
@@ -36,36 +44,36 @@ export const Navigation = ({
   return (
     <nav className="nav-section">
       <div
-        className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
-        onClick={() => handleNavigate('about', aboutRef)}
+        className={`nav-item ${activeSection === "about" ? "active" : ""}`}
+        onClick={() => handleNavigate("about", aboutRef)}
       >
         <HiDocumentText className="nav-icon" />
         <span className="nav-text">About</span>
       </div>
       <div
-        className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}
-        onClick={() => handleNavigate('experience', experienceRef)}
+        className={`nav-item ${activeSection === "experience" ? "active" : ""}`}
+        onClick={() => handleNavigate("experience", experienceRef)}
       >
         <HiBriefcase className="nav-icon" />
         <span className="nav-text">Experience</span>
       </div>
       <div
-        className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`}
-        onClick={() => handleNavigate('projects', projectsRef)}
+        className={`nav-item ${activeSection === "projects" ? "active" : ""}`}
+        onClick={() => handleNavigate("projects", projectsRef)}
       >
         <HiFolder className="nav-icon" />
         <span className="nav-text">Projects</span>
       </div>
       <div
-        className={`nav-item ${activeSection === 'education' ? 'active' : ''}`}
-        onClick={() => handleNavigate('education', educationRef)}
+        className={`nav-item ${activeSection === "education" ? "active" : ""}`}
+        onClick={() => handleNavigate("education", educationRef)}
       >
         <HiAcademicCap className="nav-icon" />
         <span className="nav-text">Education</span>
       </div>
       <div
-        className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`}
-        onClick={() => handleNavigate('skills', skillsRef)}
+        className={`nav-item ${activeSection === "skills" ? "active" : ""}`}
+        onClick={() => handleNavigate("skills", skillsRef)}
       >
         <HiCode className="nav-icon" />
         <span className="nav-text">Skills</span>
