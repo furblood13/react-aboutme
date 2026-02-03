@@ -140,7 +140,7 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const aboutText = `I graduated from Konya Technical University with a degree in Software Engineering in 2025. I am a mobile developer with one year of experience in SwiftUI, React Native, MVVM architecture, and API integrations. I have three published applications on the App Store, and I also developed an enterprise-distributed React Native application for TRT.
+export const aboutText = `I graduated from Konya Technical University with a degree in Software Engineering in 2026. I am a mobile developer with 2 year of experience in SwiftUI, React Native, MVVM architecture, and API integrations. I have three published applications on the App Store, and I also developed an enterprise-distributed React Native application for TRT.
 
 I'm eager to bring my skills to an innovative and dynamic team where I can contribute and continue to grow. You can find my published apps on my App Store page.
 
